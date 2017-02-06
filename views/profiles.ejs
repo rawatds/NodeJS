@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Profile page</title>
+
+<link href="/assets/css/style.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+
+<% include partial/nav.ejs %>
+
+
+<!-- Main content -->
+<h1>Profile Page</h1>
+
+Welcome <b> <%= name %> </b><br>
+Age :<b> <%= data.age %> </b><br>
+Dept: <b> <%= data.dept %></b><br>
+Email: <b> <%= data.email %></b><br>
+Hobbies: <br>
+<% data.hobbies.forEach(function(item){ %>
+    <b> -  <%= item %>       </b><br>
+<%})    %>
+
+
+
+<!-- Sign and date the page, it's only polite! -->
+<address><%= new Date() %> </address>
+
+</body>
+</html>
